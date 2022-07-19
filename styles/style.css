@@ -1,0 +1,129 @@
+/*  Google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&   family=Poppins:wght@500&display=swap'); 
+
+/* common styles or utilities*/
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 21px;  
+}
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 870px;
+    padding: 30px;   
+}
+hr{
+    border: 1px solid #D1D1D1;
+}
+
+/* Top Section */
+.section-title{
+    color: #562EFF;
+}
+.top-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-bottom: 30px;
+}
+.top-section .people{
+    display: flex;
+    align-items: center;
+}
+section .top-section .people img{
+   width: 56px;
+   height: 56px;
+}
+.people .members-name{
+    margin-left: 16px;
+}
+
+/* ---------Top Blog section ------------
+--------------------------------------- */
+.bolgs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 26px;
+}
+.blog{
+    display: flex;
+}
+.blog .thumbnail img{
+    width: 177px;
+    height: 117px;
+}
+.blog-info{
+    margin-left: 16px;
+}
+.blog-info .blog-author{
+    color: #9F9F9F;
+}
+.blog-info .blog-author > a{
+    color: #562EFF;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/*--------Course section styles------*/
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+    opacity: 0.25;
+}
+
+/* ---------------------
+    Media queries 
+-----------------------*/
+
+/* Mobile devices */
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+        text-align: center;
+    }
+    .people{
+        flex-direction: column;
+    }
+    .top-section,.bolgs,.courses{
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 10px;
+    }
+    .bolgs .blog{
+        flex-direction: column;
+    }
+}
+
+/* Tablet or Medium devices */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .top-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
